@@ -54,7 +54,7 @@ nums = [1,2,3]
 
 # Common Operations
 nums.append(1)     # Add to end
-nums.pop()         # Remove & return last element
+nums.pop(index=-1) # Remove & return last element by default
 nums.insert(0,10)  # Add 10 from left (at index 0 which is start)
 nums.index(1)      # Find index
 
@@ -65,6 +65,7 @@ nums[-1]    # Last item
 nums[::-1]  # Reverse list
 nums[1:]    # Everything after index 1
 nums[:3]    # First three elements
+nums[:]     # List copy
 ```
 
 ## Dictionary
