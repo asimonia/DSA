@@ -77,7 +77,6 @@ d = {'a':1, 'b':2}
 
 # Essential Operations
 d.get('key', default)     # Safe access with default
-d.setdefault('key', 0)    # Set if missing
 d.items()                 # Key-value pairs
 d.keys()                  # Just keys
 d.values()               # Just values
@@ -114,11 +113,7 @@ from collections import deque
 # Perfect for BFS - O(1) operations on both ends
 d = deque()
 d.append(1)          # Add right
-d.appendleft(2)      # Add left
-d.pop()              # Remove right
 d.popleft()          # Remove left
-d.extend([1,2,3])    # Extend right
-d.extendleft([1,2,3])# Extend left
 d.rotate(n)          # Rotate n steps right (negative for left)
 ```
 
@@ -178,7 +173,6 @@ s = "hello world"
 # Essential Methods
 s.split()            # Split on whitespace
 s.split(',')         # Split on comma and return a list
-s.strip()            # Remove leading/trailing whitespace
 s.lower()            # Convert to lowercase
 s.upper()            # Convert to uppercase
 s.isalnum()          # Check if alphanumeric
