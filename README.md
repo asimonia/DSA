@@ -13,9 +13,14 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
   - [Tuples](#tuples)
   - [Strings](#strings)
 - [Built-in Functions](#built-in-functions)
-- [Advanced Topics](#advanced-topics)
+- [Math Topics](#math-topics)
 - [Tips & Gotchas](#tips--gotchas)
-- [Trees](#trees)
+- [Advanced Data Structures & Algorithms](#data-structures)
+  - [Linked Lists](#linked-lists)
+  - [Trees](#trees)
+  - [Graphs](#graphs)
+  - [Two Pointer](#two-pointer)
+  - [Sliding Window](#sliding-window)
 
 # Basics
 
@@ -225,24 +230,16 @@ sum(itr)	           # sum of elements in an iterable
 len(itr)             # number of elements
 ```
 
-# Advanced Topics
+# Math Topics
 
 ## Math Module Essentials
 ```python
 import math
 
-# Constants
-math.pi       # 3.141592653589793
-math.e        # 2.718281828459045
-
 # Common Functions
 math.ceil(2.3)        # 3 - Smallest integer greater than x
 math.floor(2.3)       # 2 - Largest integer less than x
-math.gcd(a, b)        # Greatest common divisor
-math.log(x, base)     # Logarithm with specified base
 math.sqrt(x)          # Square root
-math.pow(x, y)        # x^y (prefer x ** y for integers)
-
 ```
 
 ## Important Python Integer Operations
@@ -252,7 +249,6 @@ math.pow(x, y)        # x^y (prefer x ** y for integers)
 x = -3
 y = 2
 print(x // y)        # -2 (floor division)
-print(int(x/y))      # -1 (preferred for negative numbers)
 print(x % y)         # 1 (Python's modulo with negative numbers)
 ```
 
@@ -339,5 +335,15 @@ for n1, n2 in zip(nums1, nums2):
     print(n1, n2)
 ```
 
+# Advanced Data Structures & Algorithms
+
+## Linked Lists
+
 ## Trees
 <img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/d254a9c4-6961-4980-96b4-6624f0184e87" />
+
+## Graphs
+
+## Two Pointer
+
+## Sliding Window
