@@ -7,7 +7,6 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
 - [Data Structures](#data-structures)
   - [Lists](#lists)
   - [Dictionary](#dictionary)
-  - [Counter](#counter)
   - [Deque](#deque)
   - [Heapq](#heapq)
   - [Sets](#sets)
@@ -22,26 +21,48 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
 ## Data Types
 ![Python Data Types](https://user-images.githubusercontent.com/59110866/173563442-1a6fa3d2-b569-4eb0-99cc-9b91cc8be1eb.png)
 
-## Keywords
+## Looping
 ```python
-# Logical
-and	                           
-not	                           
-or	                          
-in	                          
+# Iterating through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
 
-# Looping
-for
-while
-break
-continue
+# Iterating through a string
+name = "Python"
+for char in name:
+    print(char)
 
-# Boolean and Null
-False	                        
-True	                        
-None	                        
+# Generates numbers from 0 to 4 (inclusive and exclusive)
+for i in range(0, 5):
+    print(i)
+               
+# While loop with continue
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue  # Skip printing 3
+    print(i)
+
+# While loop with break
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        break  # Exit the loop when i is 3
+    print(i)
+print("Loop ended")              
 ```
-
+## Branching
+```python
+if target < root.val:
+  return binary_search_tree_includes(root.left, target)
+elif target > root.val:
+  return binary_search_tree_includes(root.right, target)
+else:
+  return True
+```
 
 # Data Structures
 
@@ -86,21 +107,6 @@ d.pop(key)              # Remove and return value
 from collections import defaultdict
 d = defaultdict(list)     # Auto-initialize missing keys
 d = defaultdict(int)      # Useful for counting
-```
-
-## Counter
-```python
-from collections import Counter
-
-# Initialize
-c = Counter(['a','a','b'])    # From iterable
-c = Counter("hello")          # From string
-
-# Operations
-c.most_common(2)      # Top 2 frequent elements
-c['a'] += 1           # Increment count
-c.update("more")      # Add counts from iterable
-c.total()             # Sum of all counts
 ```
 
 ## Deque
@@ -251,54 +257,34 @@ print(x % y)         # 1 (Python's modulo with negative numbers)
 
 # Tips & Gotchas
 
-1. Integer Division:
-```python
-# Use int() for consistent negative number handling
-print(-3//2)        # Returns -2
-print(int(-3/2))    # Returns -1 (usually desired)
-```
 
-2. Default Dictionaries:
-```python
-# Prefer defaultdict for frequency counting
-from collections import defaultdict
-freq = defaultdict(int)
-for x in lst:
-    freq[x] += 1    # No KeyError if x is new
-```
-
-3. Heap Priority:
+1. Heap Priority:
 ```python
 # For custom priority in heapq, use tuples
 heap = []
 heapq.heappush(heap, (priority, item))
 ```
 
-4. List Comprehension:
+2. List Comprehension:
 ```python
 # Often clearer than map/filter
 squares = [x*x for x in range(10) if x % 2 == 0]
 ```
 
-5. String Building:
+3. String Building:
 ```python
 # Use join() instead of += for strings
 chars = ['a', 'b', 'c']
 word = ''.join(chars)  # More efficient
 ```
 
-6. Using Sets for Efficiency:
-```python
-# O(1) lookup for contains operations
-seen = set()
-if x in seen:  # Much faster than list lookup
-    print("Found!")
-```
-
-7. Custom Sort Keys:
+4. Custom Sort Keys:
 ```python
 # Sort by length then alphabetically
-words.sort(key=lambda x: (len(x), x))
+# words = ['banana', 'apple', 'pear']
+sorted_words = sorted(words, key=lambda x: (len(x), x))
+# sorted_words -> ['pear', 'apple', 'banana']
+
 
 # Sort a list of tuples by the first element
 # items = [(3,2),(2,5),(-2,9)]
@@ -306,7 +292,7 @@ sorted_list = sorted(items, key=lambda x:x[0])
 # sorted = [(-2,9),(2,5),(3,2)]
 ```
 
-8. Object Instances:
+5. Object Instances:
 ```python
 # Boolean value, check to see if object is instance of class
 number = 10
@@ -325,7 +311,7 @@ c = a
 print(a is c)  # True (c now refers to the same object as a)
 ```
 
-9. List Concatentation and Repetition:
+6. List Concatentation and Repetition:
 ```python
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
@@ -333,10 +319,21 @@ list1 + list2  # ["a", "b", "c", 1, 2, 3]
 [1, 2] * 2     # [1, 2, 1, 2]
 ```
 
-10. Splat Operator
+7. Splat Operator
 ```python
 numbers = [1, 2, 3]
 print(*numbers)  # Equivalent to print(1, 2, 3)
 ```
 
+8. Looping methods
+```python
+# With index and value
+for i, n in enumerate(nums):
+    print(i, n)
+
+# Loop through multiple arrays simultaneously with unpacking
+nums1 = [1, 3, 5]
+nums2 = [2, 4, 6]
+for n1, n2 in zip(nums1, nums2):
+    print(n1, n2)
 ```
