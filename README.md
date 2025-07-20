@@ -15,6 +15,7 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
 - [Built-in Functions](#built-in-functions)
 - [Advanced Topics](#advanced-topics)
 - [Tips & Gotchas](#tips--gotchas)
+- [Trees](#trees)
 
 # Basics
 
@@ -337,3 +338,6 @@ nums2 = [2, 4, 6]
 for n1, n2 in zip(nums1, nums2):
     print(n1, n2)
 ```
+
+## Trees
+<img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/d254a9c4-6961-4980-96b4-6624f0184e87" />
