@@ -342,6 +342,95 @@ for n1, n2 in zip(nums1, nums2):
 ## Trees
 <img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/d254a9c4-6961-4980-96b4-6624f0184e87" />
 
+### Properties
+- at most 2 children per node, referred to left and right
+- exactly one root
+- exactly one path between root and any node
+
+### Definitions
+- Nodes: The fundamental part of a binary tree, where each node contains data and link to two child nodes.
+- Root: The topmost node in a tree is known as the root node. It has no parent and serves as the starting point for all nodes in the tree.
+- Parent Node: A node that has one or more child nodes. In a binary tree, each node can have at most two children.
+- Child Node: A node that is a descendant of another node (its parent).
+- Leaf Node: A node that does not have any children or both children are null.
+- Depth of a Node: The number of edges from a specific node to the root node. The depth of the root node is zero.
+- Height of a Binary Tree: The number of nodes from the deepest leaf node to the root node.
+
+### Tree Traversals
+**DFS Traversal:** Explore one branch fully before backtracking.
+- Preorder: Visits the node first, then left subtree, then right subtree
+- Inorder: Visits left subtree, then the node, then the right subtree
+- Postorder: Visits left subtree, then right subtree, then the node.
+**BFS Traversal**: Explore one branch fully before backtracking.
+- Level order: BFS explores all nodes at the present depth before moving on to nodes at the next depth level.
+
+```
+python
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+# In-order DFS: Left, Root, Right
+def in_order_dfs(node):
+    if node is None:
+        return
+    in_order_dfs(node.left)
+    print(node.val, end=' ')
+    in_order_dfs(node.right)
+
+# Pre-order DFS: Root, Left, Right
+def pre_order_dfs(node):
+    if node is None:
+        return
+    print(node.val, end=' ')
+    pre_order_dfs(node.left)
+    pre_order_dfs(node.right)
+
+# Post-order DFS: Left, Right, Root
+def post_order_dfs(node):
+    if node is None:
+        return
+    post_order_dfs(node.left)
+    post_order_dfs(node.right)
+    print(node.val, end=' ')
+
+# BFS: Level order traversal
+def bfs(root):
+    if root is None:
+        return
+    queue = [root]
+    while queue:
+        node = queue.pop(0)
+        print(node.val, end=' ')
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+
+if __name__ == "__main__":
+    # Creating the tree
+    root = Node(2)
+    root.left = Node(3)
+    root.right = Node(4)
+    root.left.left = Node(5)
+
+    print("In-order DFS: ", end='')
+    in_order_dfs(root)
+    print("\nPre-order DFS: ", end='')
+    pre_order_dfs(root)
+    print("\nPost-order DFS: ", end='')
+    post_order_dfs(root)
+    print("\nLevel order: ", end='')
+    bfs(root)
+```
+
+  
+### Binary Search Tree
+
+### Balanced Tree
+
 ## Graphs
 
 ## Two Pointer
