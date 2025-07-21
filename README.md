@@ -358,19 +358,9 @@ class Node:
         self.val = val
         self.next = None
 
-a = Node('A')
-b = Node('B')
-c = Node('C')
-d = Node('D')
-
-a.next = b
-b.next = c
-c.next = d
-
-Traversing the linked list, all you need to do is pass the head
+# Traversing the linked list, all you need to do is pass the head
 # A -> B -> C -> D -> None
 
-# all you need to pass is the head
 def print_list(head):
     current = head
     while current is not None:
@@ -382,6 +372,18 @@ def recursive_list(head):
         return
     print(head.val)
     recursive_list(head.next)
+
+if __name__ == '__main__':
+    a = Node('A')
+    b = Node('B')
+    c = Node('C')
+    d = Node('D')
+
+    a.next = b
+    b.next = c
+    c.next = d
+    print_list(a)
+    recursive_list(a)
 ```
 
 ## Binary Trees
