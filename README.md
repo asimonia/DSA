@@ -364,8 +364,7 @@ for n1, n2 in zip(nums1, nums2):
 **BFS Traversal**: Explore one branch fully before backtracking.
 - Level order: BFS explores all nodes at the present depth before moving on to nodes at the next depth level.
 
-```
-python
+```python
 class Node:
     def __init__(self, val):
         self.val = val
