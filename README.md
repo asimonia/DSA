@@ -338,6 +338,19 @@ for n1, n2 in zip(nums1, nums2):
 # Advanced Data Structures & Algorithms
 
 ## Linked Lists
+<img width="800" height="330" alt="image" src="https://github.com/user-attachments/assets/5c92fdae-9d39-4706-adf7-6f628971131b" />
+
+- Linked List:
+  - Data Structure: Non-contiguous
+  - Memory Allocation: Typically allocated one by one to individual elements
+  - Insertion/Deletion: Efficient
+  - Access: Sequential
+
+- Array:
+  - Data Structure: Contiguous
+  - Memory Allocation: Typically allocated to the whole array
+  - Insertion/Deletion: Inefficient
+  - Access: Random
 
 ## Trees
 <img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/d254a9c4-6961-4980-96b4-6624f0184e87" />
