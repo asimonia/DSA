@@ -17,7 +17,7 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
 - [Tips & Gotchas](#tips--gotchas)
 - [Advanced Data Structures & Algorithms](#advanced-data-structures--algorithms)
   - [Linked Lists](#linked-lists)
-  - [Trees](#trees)
+  - [Binary Trees](#binary-trees)
   - [Graphs](#graphs)
   - [Two Pointer](#two-pointer)
   - [Sliding Window](#sliding-window)
@@ -352,7 +352,39 @@ for n1, n2 in zip(nums1, nums2):
   - Insertion/Deletion: Inefficient
   - Access: Random
 
-## Trees
+```python
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+a = Node('A')
+b = Node('B')
+c = Node('C')
+d = Node('D')
+
+a.next = b
+b.next = c
+c.next = d
+
+Traversing the linked list, all you need to do is pass the head
+# A -> B -> C -> D -> None
+
+# all you need to pass is the head
+def print_list(head):
+    current = head
+    while current is not None:
+        print(current.val)
+        current = current.next
+
+def recursive_list(head):
+    if head is None:
+        return
+    print(head.val)
+    recursive_list(head.next)
+```
+
+## Binary Trees
 <img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/d254a9c4-6961-4980-96b4-6624f0184e87" />
 
 ### Properties
@@ -425,10 +457,24 @@ def bfs(root):
 
 if __name__ == "__main__":
     # Creating the tree
-    root = Node(2)
-    root.left = Node(3)
-    root.right = Node(4)
-    root.left.left = Node(5)
+    root = Node("a")
+    b = Node("b")
+    c = Node("c")
+    d = Node("d")
+    e = Node("e")
+    f = Node("f")
+    
+    root.left = b
+    root.right = c
+    b.left = d
+    b.right = e
+    c.right = f
+    
+    #           a
+    #         /   \
+    #        b      c
+    #      /  \       \
+    #    d     e       f
 
     print("In-order DFS: ", end='')
     in_order_dfs(root)
