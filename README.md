@@ -15,7 +15,7 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
 - [Built-in Functions](#built-in-functions)
 - [Math Topics](#math-topics)
 - [Tips & Gotchas](#tips--gotchas)
-- [Advanced Data Structures & Algorithms](#data-structures)
+- [Advanced Data Structures & Algorithms](#advanced-data-structures-and-algorithms)
   - [Linked Lists](#linked-lists)
   - [Trees](#trees)
   - [Graphs](#graphs)
