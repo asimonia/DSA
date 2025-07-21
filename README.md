@@ -357,11 +357,12 @@ for n1, n2 in zip(nums1, nums2):
 - Height of a Binary Tree: The number of nodes from the deepest leaf node to the root node.
 
 ### Tree Traversals
-**DFS Traversal:** Explore one branch fully before backtracking.
+**DFS Traversal:** Explore one branch fully before backtracking.  The name of the order represents when the node gets visited.
 - Preorder: Visits the node first, then left subtree, then right subtree
 - Inorder: Visits left subtree, then the node, then the right subtree
 - Postorder: Visits left subtree, then right subtree, then the node.
-**BFS Traversal**: Explore one branch fully before backtracking.
+
+**BFS Traversal:** Explore branches far and wide.
 - Level order: BFS explores all nodes at the present depth before moving on to nodes at the next depth level.
 
 ```python
@@ -396,12 +397,13 @@ def post_order_dfs(node):
     print(node.val, end=' ')
 
 # BFS: Level order traversal
+from collections import deque
 def bfs(root):
     if root is None:
         return
-    queue = [root]
+    queue = deque([root])
     while queue:
-        node = queue.pop(0)
+        node = queue.popleft()
         print(node.val, end=' ')
         if node.left:
             queue.append(node.left)
