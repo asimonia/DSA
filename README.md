@@ -508,7 +508,27 @@ To check if a Binary tree is balanced we need to check three conditions:
 
 <img width="1043" height="746" alt="image" src="https://github.com/user-attachments/assets/79be44b4-16b1-45f2-9ee9-7981501dd770" />
 
+```python
+def check_height_balance(root):
+    if root is None:
+        return 0
 
+    left_height = check_height_balance(root.left)
+    if left_height == -1:
+        return -1
+
+    right_height = check_height_balance(root.right)
+    if right_height == -1:
+        return -1
+
+    if abs(left_height - right_height) > 1:
+        return -1
+    else:
+        return 1 + max(left_height, right_height)
+
+def is_tree_balanced(root):
+    return check_height_balance(root) > -1
+```
 ## Graphs
 
 ## Two Pointer
