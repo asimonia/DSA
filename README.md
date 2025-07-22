@@ -21,6 +21,7 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
   - [Graphs](#graphs)
   - [Two Pointer](#two-pointer)
   - [Sliding Window](#sliding-window)
+  - [Binary Search](#binary-search)
 
 # Basics
 
@@ -490,11 +491,28 @@ if __name__ == "__main__":
 
   
 ### Binary Search Tree
+Properties of Binary Search Tree:
+- The left subtree of a node contains only nodes with keys less than the node's key.
+- The right subtree of a node contains only nodes with keys greater than the node's key.
+- The left and right subtree each must also be a binary search tree.  
+- There must be no duplicate nodes(BST may have duplicate values with different handling approaches).
+
+<img width="1001" height="471" alt="image" src="https://github.com/user-attachments/assets/0377610e-e615-45cc-ad03-e2a36140482f" />
 
 ### Balanced Tree
+To check if a Binary tree is balanced we need to check three conditions:
+
+1. The absolute difference between heights of left and right subtrees at any node should be less than 1.
+2. For each node, its left subtree should be a balanced binary tree.
+3. For each node, its right subtree should be a balanced binary tree.
+
+<img width="1043" height="746" alt="image" src="https://github.com/user-attachments/assets/79be44b4-16b1-45f2-9ee9-7981501dd770" />
+
 
 ## Graphs
 
 ## Two Pointer
 
 ## Sliding Window
+
+## Binary Search
