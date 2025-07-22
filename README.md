@@ -516,3 +516,22 @@ To check if a Binary tree is balanced we need to check three conditions:
 ## Sliding Window
 
 ## Binary Search
+```python
+# Search in O(log N) time
+def binary_search(numbers, target):
+  lo = 0
+  hi = len(numbers) - 1
+
+
+  while lo <= hi:
+    midpoint = (hi + lo) // 2
+    # target is in lower half, search lower half
+    if target < numbers[midpoint]:
+      hi = midpoint - 1
+    # target is in upper half, search upper half  
+    elif target > numbers[midpoint]:
+      lo = midpoint + 1
+    else:
+      return midpoint
+  return -1
+```
