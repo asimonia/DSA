@@ -408,9 +408,9 @@ if __name__ == '__main__':
 - Child Node: A node that is a descendant of another node (its parent).
 - Sibling Node: Nodes that share the same parent.
 - Leaf Node: A node that does not have any children or both children are null.
-
+- Subtree: A portion of the tree that consists of a node and all of its descendants
 - Depth of a Node: The number of edges from a specific node to the root node. The depth of the root node is zero.
-- Height of a Binary Tree: The maximum number of edges on the path from the root node to the farthest leaf node.  An empty tree has a -1 height.
+- Height of a Binary Tree: The maximum number of edges on the path from the root node to the farthest leaf node.  Important: an empty tree has a negative one height.
 
 ### Tree Traversals
 **DFS Traversal:** Explore one branch fully before backtracking.  The name of the order represents when the node gets visited.
