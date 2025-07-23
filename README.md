@@ -16,6 +16,7 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
 - [Math Topics](#math-topics)
 - [Tips & Gotchas](#tips--gotchas)
 - [Advanced Data Structures & Algorithms](#advanced-data-structures--algorithms)
+  - [Recursion](#recursion)
   - [Linked Lists](#linked-lists)
   - [Binary Trees](#binary-trees)
   - [Graphs](#graphs)
@@ -337,6 +338,11 @@ for n1, n2 in zip(nums1, nums2):
 ```
 
 # Advanced Data Structures & Algorithms
+
+## Recursion
+1. Define the base cases (there can be multiple)
+2. Define the recursive case so that the subproblems will converge to the base case
+3. Think about the values your function will return and invoke the function from within
 
 ## Linked Lists
 <img width="800" height="330" alt="image" src="https://github.com/user-attachments/assets/5c92fdae-9d39-4706-adf7-6f628971131b" />
