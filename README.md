@@ -406,9 +406,11 @@ if __name__ == '__main__':
 - Root: The topmost node in a tree is known as the root node. It has no parent and serves as the starting point for all nodes in the tree.
 - Parent Node: A node that has one or more child nodes. In a binary tree, each node can have at most two children.
 - Child Node: A node that is a descendant of another node (its parent).
+- Sibling Node: Nodes that share the same parent.
 - Leaf Node: A node that does not have any children or both children are null.
+
 - Depth of a Node: The number of edges from a specific node to the root node. The depth of the root node is zero.
-- Height of a Binary Tree: The number of nodes from the deepest leaf node to the root node.
+- Height of a Binary Tree: The maximum number of edges on the path from the root node to the farthest leaf node.  An empty tree has a -1 height.
 
 ### Tree Traversals
 **DFS Traversal:** Explore one branch fully before backtracking.  The name of the order represents when the node gets visited.
