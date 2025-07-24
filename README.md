@@ -521,27 +521,21 @@ To check if a Binary tree is balanced we need to check three conditions:
 # height between the left and right subtrees differs by at most 1 for every node.
 def height(node):
     if node is None:
-        return 0
+        return -1
     return 1 + max(height(node.left), height(node.right))
 
-# Function to check if the binary tree with given root is height-balanced
 def is_tree_balanced(root):
   
     if root is None:
         return True
 
-    # Get the height of left and right subtrees
     lHeight = height(root.left)
     rHeight = height(root.right)
 
-    # If absolute height difference is greater than 1
-    # Then return false
     if abs(lHeight - rHeight) > 1:
         return False
 
-    # Recursively check the left and right subtrees
     return is_tree_balanced(root.left) and is_tree_balanced(root.right)
-
 ```
 ## Graphs
 
