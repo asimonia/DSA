@@ -82,10 +82,11 @@ Time Complexities:
 nums = [1,2,3]
 
 # Common Operations
-nums.append(1)     # Add to end
-nums.pop(index=-1) # Remove & return last element by default
-nums.insert(0,10)  # Add 10 from left (at index 0 which is start)
-nums.index(1)      # Find index
+nums.append(1)           # Add to end
+nums.pop(index=-1)       # Remove & return last element by default
+nums.insert(0,10)        # Add 10 from left (at index 0 which is start)
+nums.index(1)            # Find index
+nums.sort(reverse=False) # Inplace sort
 
 
 # List Slicing
