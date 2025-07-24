@@ -235,14 +235,18 @@ len(itr)             # number of elements
 
 # Math Topics
 
-## Math Module Essentials
+## Math and Statistics Module Essentials
 ```python
 import math
+from statistics import mean, median
 
 # Common Functions
 math.ceil(2.3)        # 3 - Smallest integer greater than x
 math.floor(2.3)       # 2 - Largest integer less than x
 math.sqrt(x)          # Square root
+
+mean([10, 20, 30])         # 20
+median([10, 20, 30])       # 20
 ```
 
 ## Important Python Integer Operations
