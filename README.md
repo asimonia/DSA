@@ -537,6 +537,26 @@ def is_tree_balanced(root):
 
     return is_tree_balanced(root.left) and is_tree_balanced(root.right)
 ```
+
+### Complete Binary Tree
+- every level is filled except possibly bottom level
+- nodes at the bottom level must be as far left as possible
+- by definition, it is balanced
+
+### Heap
+- binary tree data structure
+- heaps stores items and maintains an order of items
+- no relation between the siblings
+- more relaxed than search tree order
+
+- Min Heap
+  - root is the minimum
+  - the children are greater than or equal to the parent for each subtree
+
+- Max Heap
+  - root is the maximum
+  - the children are less than or equal to the parent for each subtree
+
 ## Graphs
 
 ## Two Pointer
