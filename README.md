@@ -560,6 +560,22 @@ def is_tree_balanced(root):
   - the children are less than or equal to the parent for each subtree
 
 ## Graphs
+<img width="771" height="387" alt="image" src="https://github.com/user-attachments/assets/5a9f4e08-dbfa-412c-8738-fd3924e04a57" />
+
+### Definitions
+- Graphs are composed of nodes and edges.
+  - Node: are sometimes called vertices.  They have some data in them.
+  - Edge: Edges connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way.
+- Directed vs Undirected graph: with directed graphs you can only travel in one direction.  Undirected is a two way street.
+- Neighbor nodes: the nodes that are accessible through an edge
+- Cylic graph: a graph that contains at least one cycle. A cycle in a graph is a path that starts and ends at the same node.
+- Adjacency list: the preferred way to represent some graph, as a map.  Keys are the nodes and the values are the neighbors.
+<img width="715" height="447" alt="image" src="https://github.com/user-attachments/assets/f898ae9f-9905-47e5-8fef-830035fd1fcd" />
+
+### Graph Traversals
+- **Depth-first (DFS):** explore a path fully before you bottom out (stack - LIFO)
+- **Breadth-first (BFS):** explore all paths far and wide evenly (queue - FIFO)
+
 
 ## Two Pointer
 
