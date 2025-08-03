@@ -399,6 +399,11 @@ if __name__ == '__main__':
     recursive_list(a)
 ```
 
+- Common Patterns
+  - Use a previous and next pointer
+  - Create a tail pointer to build a new list
+  - Dummy Head
+
 ## Binary Trees
 <img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/d254a9c4-6961-4980-96b4-6624f0184e87" />
 
