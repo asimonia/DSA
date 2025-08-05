@@ -422,6 +422,8 @@ if __name__ == '__main__':
 - Subtree: A portion of the tree that consists of a node and all of its descendants
 - Depth of a Node: The number of edges from a specific node to the root node. The depth of the root node is zero.
 - Height of a Binary Tree: The maximum number of edges on the path from the root node to the farthest leaf node.  Important: an empty tree has a negative one height.
+- Ancestor: A node reachable by traversing its parent chain
+- Descendant: A node in the node's subtree
 
 ### Tree Traversals
 **DFS Traversal:** Explore one branch fully before backtracking.  The name of the order represents when the node gets visited.
